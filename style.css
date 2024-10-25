@@ -13,6 +13,7 @@
 /* New Button */
 #new-button {
     position: absolute;
+    position: absolute;
     top: 60px; /* Adjust positioning */
     left: 10px;
     z-index: 999;
@@ -21,6 +22,7 @@
 }
 
 #new-button a {
+    position: absolute;
     text-decoration: none;
     display: block;
     padding: 0; /* Remove padding */
@@ -47,7 +49,8 @@
 
 /* Navigation and Menu */
 #nav {
-    position: relative;
+
+    position: absolute;
     z-index: 1;
     height: 30vh;
     width: 100vw;
@@ -81,6 +84,7 @@
 }
 
 .matrix-btn {
+    position: relative;
     color: #0F0; /* Neon green to match Matrix effect */
     background-color: rgba(0, 0, 0, 0.7);
     padding: 10px 20px;
