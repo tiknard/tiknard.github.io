@@ -68,5 +68,5 @@ function Randomiser(el, count, delay) {
   lineOne.run();
 
   setTimeout(() => {
-    window.location.assign("https://tiknard.github.io/main.html");
+    window.location.assign("../html");
 }, 3750); // 9000 millisecondes = 9 secondes
