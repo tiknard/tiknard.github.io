@@ -1,0 +1,255 @@
+/* Matrix Canvas */
+#matrixCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; /* Canvas behind the content */
+    background: black;
+}
+
+
+/* New Button */
+#new-button {
+    position: absolute;
+    top: 60px; /* Adjust positioning */
+    left: 10px;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+}
+
+#new-button a {
+    text-decoration: none;
+    display: block;
+    padding: 0; /* Remove padding */
+}
+
+.new-logo {
+    width: 40px; /* Adjust the size of the logo */
+    height: 40px;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Smooth transitions */
+}
+
+/* Hover Effect */
+#new-button a:hover .new-logo {
+    transform: scale(1.2); /* Slightly enlarge the logo */
+    opacity: 0.8; /* Make it slightly transparent */
+}
+
+/* Click Effect */
+#new-button a:active .new-logo {
+    transform: scale(0.9); /* Shrink the logo when clicked */
+    opacity: 0.6; /* Further reduce opacity on click */
+}
+
+
+/* Navigation and Menu */
+#nav {
+    position: relative;
+    z-index: 1;
+    height: 30vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#menu {
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+}
+
+#logo {
+    height: 70vh;
+    width: 70vw;
+}
+
+/* Buttons */
+#buttons {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: end;
+    gap: 20px;
+}
+
+.matrix-btn {
+    color: #0F0; /* Neon green to match Matrix effect */
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 2px solid #0F0;
+    text-align: center;
+    transition: background 0.3s, color 0.3s;
+}
+
+.matrix-btn:hover {
+    background-color: rgba(0, 255, 0, 0.2);
+    color: #FFF;
+}
+
+/* Specific buttons */
+.logo {
+    font-size: 2em;
+}
+
+.home {
+    font-size: 1.2em;
+}
+
+/* Small buttons */
+.matrix-btn-small {
+    color: #0F0;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 8px 15px;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    border: 2px solid #0F0;
+    transition: background 0.3s, color 0.3s;
+}
+
+.matrix-btn-small:hover {
+    background-color: rgba(0, 255, 0, 0.2);
+    color: #FFF;
+}
+
+.icon-svg {
+    width: 30px; /* Adjust size */
+    height: 30px;
+    fill: rgb(71, 187, 28); /* Apply color via CSS */
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+#image-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10%;
+}
+
+.image-btn {
+    width: 250px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-btn:hover {
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 768px) {
+
+    /* Canvas Matrix - Multiple instances for scrolling effect */
+    #matrixCanvas {
+        width: 100vw;
+        height: 100vh;
+        z-index: -1; /* Always behind the content */
+        background: black;
+        overflow: auto; /* Allow scrolling */
+    }
+
+    /* Display the canvases one after the other */
+    #matrixCanvasContainer {
+        display: flex;
+        flex-direction: column; /* Stack canvases vertically */
+        justify-content: space-around;
+    }
+
+    .matrixCanvasInstance {
+        width: 100%;
+        height: 100vh;
+        background: black;
+    }
+
+    /* Buttons adjustment */
+    #buttons {
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: row; /* Keep buttons horizontal */
+        justify-content: center;
+        gap: 5px; /* Further reduced gap between buttons */
+    }
+
+    .matrix-btn {
+        color: #0F0;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 4px 8px; /* Reduced padding */
+        font-family: 'Orbitron', sans-serif;
+        font-size: 0.7em; /* Smaller font size */
+        text-transform: uppercase;
+        text-decoration: none;
+        border: 2px solid #0F0;
+        text-align: center;
+        transition: background 0.3s, color 0.3s;
+        width: 70px; /* Fixed smaller width */
+        height: 35px; /* Fixed smaller height */
+    }
+
+    .matrix-btn:hover {
+        background-color: rgba(0, 255, 0, 0.2);
+        color: #FFF;
+    }
+
+    /* Small buttons */
+    .matrix-btn-small {
+        color: #0F0;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 3px 6px;
+        font-size: 0.6em; /* Reduce font size further */
+        display: flex;
+        align-items: center;
+        border: 2px solid #0F0;
+        transition: background 0.3s, color 0.3s;
+        width: 55px; /* Smaller fixed width */
+        height: 25px; /* Smaller fixed height */
+    }
+
+    .matrix-btn-small:hover {
+        background-color: rgba(0, 255, 0, 0.2);
+        color: #FFF;
+    }
+
+    /* Reverse order of divs: LinkedIn and GitHub above image buttons */
+    #links-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 5%;
+        order: -1; /* Set order to display above the images */
+    }
+
+    #image-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 5px; /* Smaller gap */
+        margin-top: 50%;
+    }
+
+    .image-btn {
+        width: 80px; /* Significantly smaller image buttons */
+        height: auto;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .image-btn:hover {
+        transform: scale(1.05); /* Slight hover effect */
+    }
+}
