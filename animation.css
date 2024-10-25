@@ -1,0 +1,13 @@
+body {
+    background: #000;
+  }
+  .text {
+    width: 950px;
+    word-wrap: break-word;
+    margin: 0 auto;
+    font-family: 'Source Code Pro', SourceCodeProLight, Arial, Monospace;
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 42px;
+    color: green;
+  }
